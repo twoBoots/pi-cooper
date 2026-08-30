@@ -12,7 +12,7 @@
 - [x] Task: Phase 1 Verification & Checkpoint (d9ab4bf)
 
 ## Phase 2: Reactive Watcher & Widget Controller (Integration)
-- [ ] Task: Reactive Track State Watcher
+- [~] Task: Reactive Track State Watcher
   - [ ] Sub-task: Write unit tests for `TrackStateWatcher` debouncing and change detection (Red)
   - [ ] Sub-task: Implement `TrackStateWatcher` using fs watching & event emitters in `src/widget/watcher.ts` (Green)
   - [ ] Sub-task: Refactor watcher cleanup / resource disposal and verify coverage >80% (Refactor)
