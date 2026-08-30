@@ -1,0 +1,3 @@
+Task: Enhanced Switch Command & Context Sync
+Scope: src/commands/switch.ts, src/commands/switch.test.ts, src/index.ts
+Summary: Integrated in-process switchWorkspace and syncTrustRegistry directly into /cooper:switch, updating process.cwd(), ExtensionContext.workspacePath, and ~/.pi/agent/trust.json.

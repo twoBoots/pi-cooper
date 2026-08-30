@@ -1,0 +1,3 @@
+Task: Package Manifest & TypeScript Configuration
+Scope: package.json, package-lock.json, tsconfig.json, tsconfig.test.json
+Summary: Configured npm package manifest with ESM exports, build/test scripts, dependencies, and strict TypeScript compiler settings.

@@ -1,0 +1,3 @@
+Task: Core Extension Interfaces & Types
+Scope: src/constants.ts, src/types.ts, tests/types.test.ts
+Summary: Defined extension identification constants, slash command mappings, TrackMetadata and CooperProjectInfo interfaces, runtime type guards, and Pi ExtensionContext contract with 100% test coverage.

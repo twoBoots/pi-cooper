@@ -1,0 +1,3 @@
+Task: Command Handlers: Switch, Validate & Checkpoint
+Scope: src/commands/switch.ts, src/commands/validate.ts, src/commands/checkpoint.ts, src/index.ts, and tests
+Summary: Implemented in-process handlers for /cooper:switch, /cooper:validate, and /cooper:checkpoint with spec auditing, target worktree resolution, and full integration into CooperExtension.

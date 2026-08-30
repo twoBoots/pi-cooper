@@ -1,0 +1,3 @@
+Task: Command Handlers: Status & Tracks
+Scope: src/commands/status.ts, src/commands/tracks.ts, and tests
+Summary: Implemented in-process handlers for /cooper:status and /cooper:tracks with workspace discovery, progress rendering, and 100% statement test coverage.
