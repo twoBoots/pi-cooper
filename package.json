@@ -1,0 +1,54 @@
+{
+  "name": "pi-cooper",
+  "version": "0.1.0",
+  "description": "Native Pi Coding Agent extension for the Cooper Spec-Driven Development (SDD) framework and Troop worktree isolation",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      }
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:coverage": "vitest run --coverage",
+    "lint": "tsc --noEmit"
+  },
+  "keywords": [
+    "pi",
+    "pi-agent",
+    "cooper",
+    "sdd",
+    "troop",
+    "worktrees"
+  ],
+  "author": "twoBoots",
+  "license": "MIT",
+  "devDependencies": {
+    "@earendil-works/pi-agent-core": "^0.84.4",
+    "@types/node": "^22.13.0",
+    "@vitest/coverage-v8": "^3.0.5",
+    "tsup": "^8.3.6",
+    "typescript": "^5.7.3",
+    "vitest": "^3.0.5"
+  },
+  "peerDependencies": {
+    "@earendil-works/pi-agent-core": ">=0.80.0"
+  },
+  "peerDependenciesMeta": {
+    "@earendil-works/pi-agent-core": {
+      "optional": true
+    }
+  }
+}
