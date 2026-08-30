@@ -1,0 +1,3 @@
+Task: Worktree & Trust Registry Utilities
+Scope: src/utils/worktree.ts, src/utils/worktree.test.ts
+Summary: Implemented resolveWorktreePath, listWorktrees, switchWorkspace with process.chdir & realpath normalization, and syncTrustRegistry with atomic updates and 91% unit test coverage.
