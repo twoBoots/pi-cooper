@@ -8,7 +8,7 @@
   - [x] Sub-task: Write unit tests for worktree path resolution, `process.chdir()` switching, and `trust.json` synchronization (Red)
   - [x] Sub-task: Implement `src/utils/worktree.ts` (Green)
   - [x] Sub-task: Refactor & maintain >80% coverage (Refactor)
-- [ ] Task: Phase 1 Verification & Checkpoint
+- [x] Task: Phase 1 Verification & Checkpoint (64fbbc9)
 
 ## Phase 2: Switch Command Enhancement & Extension Integration (TDD)
 
