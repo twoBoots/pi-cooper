@@ -5,10 +5,10 @@
   - [x] Sub-task: Write unit tests for `StatusFormatter` (ANSI, Compact, Idle, Uninitialized, Non-TTY) (Red)
   - [x] Sub-task: Implement `StatusFormatter` and format helpers in `src/widget/formatter.ts` (Green)
   - [x] Sub-task: Refactor formatter logic and verify test coverage >80% (Refactor)
-- [~] Task: Plan and Spec State Inspector
-  - [ ] Sub-task: Write unit tests for reading active track plan progress and spec validity (Red)
-  - [ ] Sub-task: Implement state extraction functions in `src/widget/state.ts` (Green)
-  - [ ] Sub-task: Refactor state extraction and verify coverage >80% (Refactor)
+- [x] Task: Plan and Spec State Inspector (e613b2a)
+  - [x] Sub-task: Write unit tests for reading active track plan progress and spec validity (Red)
+  - [x] Sub-task: Implement state extraction functions in `src/widget/state.ts` (Green)
+  - [x] Sub-task: Refactor state extraction and verify coverage >80% (Refactor)
 - [ ] Task: Phase 1 Verification & Checkpoint (Tests, sync, checkpoint commit)
 
 ## Phase 2: Reactive Watcher & Widget Controller (Integration)
