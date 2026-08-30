@@ -12,8 +12,8 @@
 
 ## Phase 2: Switch Command Enhancement & Extension Integration (TDD)
 
-- [~] Task: Enhanced Switch Command & Context Sync
-  - [ ] Sub-task: Write unit tests for enhanced `/cooper:switch` with live directory changing & trust sync (Red)
-  - [ ] Sub-task: Implement enhanced `src/commands/switch.ts` and integrate with `CooperExtension` (Green)
-  - [ ] Sub-task: Refactor & maintain >80% coverage (Refactor)
+- [x] Task: Enhanced Switch Command & Context Sync (05a3d4b)
+  - [x] Sub-task: Write unit tests for enhanced `/cooper:switch` with live directory changing & trust sync (Red)
+  - [x] Sub-task: Implement enhanced `src/commands/switch.ts` and integrate with `CooperExtension` (Green)
+  - [x] Sub-task: Refactor & maintain >80% coverage (Refactor)
 - [ ] Task: Phase 2 Verification & Checkpoint
