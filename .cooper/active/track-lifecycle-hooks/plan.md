@@ -45,7 +45,7 @@
   - [x] Sub-task: Write integration tests for `CooperExtension` lifecycle hook registration (Red)
   - [x] Sub-task: Connect lifecycle hooks and command handlers in `CooperExtension.initialize()` (Green)
   - [x] Sub-task: Refactor and verify end-to-end extension execution (Refactor)
-- [ ] Task: Phase 3 Verification & Track Finalization
-  - [ ] Sub-task: Run full test suite & linter
-  - [ ] Sub-task: Synchronize living capability specs with spec deltas
-  - [ ] Sub-task: Final checkpoint commit and push to remote
+- [x] Task: Phase 3 Verification & Track Finalization [checkpoint: 0406edf]
+  - [x] Sub-task: Run full test suite & linter
+  - [x] Sub-task: Synchronize living capability specs with spec deltas
+  - [x] Sub-task: Final checkpoint commit and push to remote
