@@ -14,10 +14,10 @@
 
 ## Phase 2: Extension Entrypoint & Type Definitions (TDD)
 
-- [~] Task: Core Extension Interfaces & Types
-  - [ ] Sub-task: Write unit tests verifying domain type guards and constants (Red)
-  - [ ] Sub-task: Implement `src/types.ts` and `src/constants.ts` (Green)
-  - [ ] Sub-task: Refactor & verify type compatibility (Refactor)
+- [x] Task: Core Extension Interfaces & Types (179d4f4)
+  - [x] Sub-task: Write unit tests verifying domain type guards and constants (Red)
+  - [x] Sub-task: Implement `src/types.ts` and `src/constants.ts` (Green)
+  - [x] Sub-task: Refactor & verify type compatibility (Refactor)
 - [ ] Task: Extension Activation Entrypoint
   - [ ] Sub-task: Write unit tests for `activate(context)` extension lifecycle registration (Red)
   - [ ] Sub-task: Implement `src/index.ts` with default export (Green)
