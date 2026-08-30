@@ -1,0 +1,7 @@
+{
+  "track_id": "track-lifecycle-hooks",
+  "title": "Implement event-driven SDD governance, pre-commit/pre-tool spec validation, Git Notes capture, and phase gatekeeping",
+  "type": "feature",
+  "status": "new",
+  "created_at": "2026-08-30T09:12:00Z"
+}
