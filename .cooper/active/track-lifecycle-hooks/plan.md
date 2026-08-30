@@ -37,10 +37,10 @@
 ---
 
 ## Phase 3: Phase Gatekeeper & Extension Runtime Integration
-- [~] Task: Phase Gatekeeper Engine
-  - [ ] Sub-task: Write unit tests for `PhaseGatekeeper` phase verification and git remote sync (Red)
-  - [ ] Sub-task: Implement `PhaseGatekeeper` test runner coordination and remote push logic (Green)
-  - [ ] Sub-task: Refactor and verify coverage >80% (Refactor)
+- [x] Task: Phase Gatekeeper Engine (e225b83)
+  - [x] Sub-task: Write unit tests for `PhaseGatekeeper` phase verification and git remote sync (Red)
+  - [x] Sub-task: Implement `PhaseGatekeeper` test runner coordination and remote push logic (Green)
+  - [x] Sub-task: Refactor and verify coverage >80% (Refactor)
 - [ ] Task: Pi Extension Lifecycle Hook Wiring
   - [ ] Sub-task: Write integration tests for `CooperExtension` lifecycle hook registration (Red)
   - [ ] Sub-task: Connect lifecycle hooks and command handlers in `CooperExtension.initialize()` (Green)
