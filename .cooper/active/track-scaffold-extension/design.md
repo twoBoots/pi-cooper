@@ -15,7 +15,7 @@ pi-cooper/
 │   └── constants.ts      # Extension metadata, versioning, command constants
 ├── package.json          # Package manifest, dependencies, test/build scripts
 ├── tsconfig.json         # Strict TypeScript configuration
-├── tsup.config.ts        # Fast bundling toolchain (ESM + dts)
+├── rolldown.config.js    # OXC/Rolldown bundler configuration
 └── vitest.config.ts      # Test harness with v8 code coverage
 ```
 
@@ -36,6 +36,7 @@ export default function activate(context: ExtensionContext): void;
 ## 3. Toolchain & Dependencies
 - **Runtime Target**: Node.js 20+ (ESM)
 - **Compiler**: TypeScript 5.x (`tsc --noEmit` for validation)
-- **Bundler**: `tsup` (esbuild-powered ESM bundle generator)
+- **Bundler**: `rolldown` (OXC-powered Rust ESM bundler)
+- **Linter**: `oxlint` (OXC Rust linter)
 - **Testing**: `vitest` with `@vitest/coverage-v8` (>80% threshold enforcement)
 - **Core Dependencies**: `@earendil-works/pi-agent-core` (or mock interface during early bootstrapping)
