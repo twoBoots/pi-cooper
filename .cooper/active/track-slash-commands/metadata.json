@@ -1,6 +1,7 @@
 {
   "created_at": "2026-08-30T14:32:30+10:00",
-  "status": "new",
+  "completed_at": "2026-08-30T14:59:58+10:00",
+  "status": "completed",
   "title": "Implement zero-cost in-process human slash commands",
   "track_id": "track-slash-commands",
   "type": "feature"
