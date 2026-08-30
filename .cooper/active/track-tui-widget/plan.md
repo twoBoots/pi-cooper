@@ -1,7 +1,7 @@
 # Implementation Plan: Persistent TUI Status Widget & Reactive Indicators
 
 ## Phase 1: Status Formatter & State Parser (Domain Logic)
-- [ ] Task: TUI Status Widget State Types & Formatter
+- [~] Task: TUI Status Widget State Types & Formatter
   - [ ] Sub-task: Write unit tests for `StatusFormatter` (ANSI, Compact, Idle, Uninitialized, Non-TTY) (Red)
   - [ ] Sub-task: Implement `StatusFormatter` and format helpers in `src/widget/formatter.ts` (Green)
   - [ ] Sub-task: Refactor formatter logic and verify test coverage >80% (Refactor)
