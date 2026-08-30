@@ -7,9 +7,9 @@
 - [x] Task: Package Manifest & TypeScript Configuration (40cb768)
   - [x] Sub-task: Create `package.json` with scripts, metadata, and dependencies
   - [x] Sub-task: Configure `tsconfig.json` with strict ESM settings
-- [~] Task: Build & Test Toolchain Configuration
-  - [ ] Sub-task: Configure `tsup.config.ts` for ESM bundling to `dist/`
-  - [ ] Sub-task: Configure `vitest.config.ts` with >80% coverage threshold
+- [x] Task: Build & Test Toolchain Configuration (ac85310)
+  - [x] Sub-task: Configure `tsup.config.ts` for ESM bundling to `dist/`
+  - [x] Sub-task: Configure `vitest.config.ts` with >80% coverage threshold
 - [ ] Task: Phase 1 Verification & Checkpoint
 
 ## Phase 2: Extension Entrypoint & Type Definitions (TDD)
