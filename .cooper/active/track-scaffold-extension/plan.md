@@ -14,7 +14,7 @@
 
 ## Phase 2: Extension Entrypoint & Type Definitions (TDD)
 
-- [ ] Task: Core Extension Interfaces & Types
+- [~] Task: Core Extension Interfaces & Types
   - [ ] Sub-task: Write unit tests verifying domain type guards and constants (Red)
   - [ ] Sub-task: Implement `src/types.ts` and `src/constants.ts` (Green)
   - [ ] Sub-task: Refactor & verify type compatibility (Refactor)
