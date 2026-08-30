@@ -1,0 +1,3 @@
+Task: TuiWidget Component Controller
+Scope: src/widget/tui-widget.ts, src/widget/tui-widget.test.ts
+Summary: Implemented TuiWidget component controller managing status bar registration, reactive event updates, and lifecycle resource disposal with 100% test coverage.
