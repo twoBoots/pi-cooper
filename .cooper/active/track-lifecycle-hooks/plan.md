@@ -41,7 +41,7 @@
   - [x] Sub-task: Write unit tests for `PhaseGatekeeper` phase verification and git remote sync (Red)
   - [x] Sub-task: Implement `PhaseGatekeeper` test runner coordination and remote push logic (Green)
   - [x] Sub-task: Refactor and verify coverage >80% (Refactor)
-- [ ] Task: Pi Extension Lifecycle Hook Wiring
+- [~] Task: Pi Extension Lifecycle Hook Wiring
   - [ ] Sub-task: Write integration tests for `CooperExtension` lifecycle hook registration (Red)
   - [ ] Sub-task: Connect lifecycle hooks and command handlers in `CooperExtension.initialize()` (Green)
   - [ ] Sub-task: Refactor and verify end-to-end extension execution (Refactor)
