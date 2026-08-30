@@ -1,0 +1,3 @@
+Task: Build & Test Toolchain Configuration
+Scope: tsup.config.ts, vitest.config.ts
+Summary: Configured tsup for ESM bundling targeting Node 20 with dts emissions, and vitest with v8 coverage provider enforcing >80% coverage threshold.
