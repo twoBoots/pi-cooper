@@ -5,10 +5,10 @@
 ---
 
 ## Phase 1: Spec Delta Interceptor Engine
-- [~] Task: Spec Delta Interception & Validation Logic
-  - [ ] Sub-task: Write unit tests for `SpecDeltaInterceptor` (Red)
-  - [ ] Sub-task: Implement `SpecDeltaInterceptor` validation, diff matching, and bypass flags (Green)
-  - [ ] Sub-task: Refactor & verify test coverage >80% (Refactor)
+- [x] Task: Spec Delta Interception & Validation Logic (0ed4fad)
+  - [x] Sub-task: Write unit tests for `SpecDeltaInterceptor` (Red)
+  - [x] Sub-task: Implement `SpecDeltaInterceptor` validation, diff matching, and bypass flags (Green)
+  - [x] Sub-task: Refactor & verify test coverage >80% (Refactor)
 - [ ] Task: Pre-Commit & Pre-Tool Hook Handlers
   - [ ] Sub-task: Write unit tests for hook invocation and CLI/event integration (Red)
   - [ ] Sub-task: Implement hook execution and formatting helpers (Green)
