@@ -10,4 +10,4 @@ All active and completed Cooper tracks are registered below.
 
 - [x] **Track: Implement zero-cost in-process human slash commands** (`track-slash-commands`)
   - Worktree: `.worktrees/track-slash-commands`
-  - Link: [.cooper/active/track-slash-commands/index.md](.cooper/active/track-slash-commands/index.md)
+  - Link: [.cooper/archive/track-slash-commands/index.md](.cooper/archive/track-slash-commands/index.md)
