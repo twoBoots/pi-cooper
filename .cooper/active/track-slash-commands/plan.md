@@ -8,10 +8,10 @@
   - [x] Sub-task: Write unit tests for discovering `.cooper/` workspace, reading `tracks.md`, `metadata.json`, and `plan.md` task counts (Red)
   - [x] Sub-task: Implement `src/utils/cooper-fs.ts` (Green)
   - [x] Sub-task: Refactor & maintain >80% coverage (Refactor)
-- [~] Task: Terminal Formatting Utilities
-  - [ ] Sub-task: Write unit tests for progress bars, status badges, and formatting (Red)
-  - [ ] Sub-task: Implement `src/utils/format.ts` (Green)
-  - [ ] Sub-task: Refactor & maintain >80% coverage (Refactor)
+- [x] Task: Terminal Formatting Utilities (3c12752)
+  - [x] Sub-task: Write unit tests for progress bars, status badges, and formatting (Red)
+  - [x] Sub-task: Implement `src/utils/format.ts` (Green)
+  - [x] Sub-task: Refactor & maintain >80% coverage (Refactor)
 - [ ] Task: Phase 1 Verification & Checkpoint
 
 ## Phase 2: Slash Command Handlers & Extension Integration (TDD)
