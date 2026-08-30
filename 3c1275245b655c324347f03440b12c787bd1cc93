@@ -1,0 +1,3 @@
+Task: Terminal Formatting Utilities
+Scope: src/utils/format.ts, src/utils/format.test.ts
+Summary: Implemented renderProgressBar, formatStatusBadge, formatTracksList, and formatSpecValidationReport with 95% unit test coverage.
