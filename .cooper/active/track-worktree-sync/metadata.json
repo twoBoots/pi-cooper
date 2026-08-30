@@ -1,0 +1,7 @@
+{
+  "created_at": "2026-08-30T15:07:59+10:00",
+  "status": "new",
+  "title": "Implement Troop worktree switching, runtime context sync, and trust registry",
+  "track_id": "track-worktree-sync",
+  "type": "feature"
+}
