@@ -4,7 +4,7 @@
 
 ## Phase 1: Project Scaffolding & Toolchain Configuration
 
-- [ ] Task: Package Manifest & TypeScript Configuration
+- [~] Task: Package Manifest & TypeScript Configuration
   - [ ] Sub-task: Create `package.json` with scripts, metadata, and dependencies
   - [ ] Sub-task: Configure `tsconfig.json` with strict ESM settings
 - [ ] Task: Build & Test Toolchain Configuration
