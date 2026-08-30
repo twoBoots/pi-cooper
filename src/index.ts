@@ -41,7 +41,7 @@ export class CooperExtension {
 
     this.context.registerCommand(COMMANDS.SWITCH, async (...args: unknown[]) => {
       const trackId = typeof args[0] === "string" ? args[0] : undefined;
-      return handleSwitchCommand(trackId, this.context.workspacePath);
+      return handleSwitchCommand(trackId, this.context);
     });
 
     this.context.registerCommand(COMMANDS.VALIDATE, async () => {
@@ -77,6 +77,7 @@ export * from "./types.js";
 export * from "./constants.js";
 export * from "./utils/cooper-fs.js";
 export * from "./utils/format.js";
+export * from "./utils/worktree.js";
 export * from "./commands/status.js";
 export * from "./commands/tracks.js";
 export * from "./commands/switch.js";
