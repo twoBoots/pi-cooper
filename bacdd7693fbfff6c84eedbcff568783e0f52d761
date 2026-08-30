@@ -1,0 +1,3 @@
+Task: TUI Status Widget State Types & Formatter
+Scope: src/widget/formatter.ts, src/widget/formatter.test.ts
+Summary: Implemented status bar formatter supporting ANSI colors, compact mode for narrow columns, uninitialized/idle states, and non-TTY fallback with 100% test coverage.
