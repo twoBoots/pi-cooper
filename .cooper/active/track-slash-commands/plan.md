@@ -16,7 +16,7 @@
 
 ## Phase 2: Slash Command Handlers & Extension Integration (TDD)
 
-- [ ] Task: Command Handlers: Status & Tracks
+- [~] Task: Command Handlers: Status & Tracks
   - [ ] Sub-task: Write unit tests for `/cooper:status` and `/cooper:tracks` (Red)
   - [ ] Sub-task: Implement `src/commands/status.ts` and `src/commands/tracks.ts` (Green)
   - [ ] Sub-task: Refactor & maintain >80% coverage (Refactor)
