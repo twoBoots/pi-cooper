@@ -4,10 +4,10 @@
 
 ## Phase 1: Cooper Filesystem & Terminal Formatting Utilities (TDD)
 
-- [~] Task: Cooper Filesystem Utilities
-  - [ ] Sub-task: Write unit tests for discovering `.cooper/` workspace, reading `tracks.md`, `metadata.json`, and `plan.md` task counts (Red)
-  - [ ] Sub-task: Implement `src/utils/cooper-fs.ts` (Green)
-  - [ ] Sub-task: Refactor & maintain >80% coverage (Refactor)
+- [x] Task: Cooper Filesystem Utilities (6acebef)
+  - [x] Sub-task: Write unit tests for discovering `.cooper/` workspace, reading `tracks.md`, `metadata.json`, and `plan.md` task counts (Red)
+  - [x] Sub-task: Implement `src/utils/cooper-fs.ts` (Green)
+  - [x] Sub-task: Refactor & maintain >80% coverage (Refactor)
 - [ ] Task: Terminal Formatting Utilities
   - [ ] Sub-task: Write unit tests for progress bars, status badges, and formatting (Red)
   - [ ] Sub-task: Implement `src/utils/format.ts` (Green)
