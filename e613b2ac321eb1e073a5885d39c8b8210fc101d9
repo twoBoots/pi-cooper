@@ -1,0 +1,3 @@
+Task: Plan and Spec State Inspector
+Scope: src/widget/state.ts, src/widget/state.test.ts
+Summary: Implemented SDD state extraction inspecting plan.md task/phase progress and validating living spec-deltas against GIVEN/WHEN/THEN criteria with 100% test coverage.
