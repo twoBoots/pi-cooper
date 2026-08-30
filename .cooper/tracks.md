@@ -16,6 +16,6 @@ All active and completed Cooper tracks are registered below.
   - Worktree: `.worktrees/track-worktree-sync`
   - Link: [.cooper/active/track-worktree-sync/index.md](.cooper/active/track-worktree-sync/index.md)
 
-- [ ] **Track: Implement Persistent TUI Status Widget & Reactive Indicators** (`track-tui-widget`)
+- [x] **Track: Implement Persistent TUI Status Widget & Reactive Indicators** (`track-tui-widget`)
   - Worktree: `.worktrees/track-tui-widget`
   - Link: [.cooper/active/track-tui-widget/index.md](.cooper/active/track-tui-widget/index.md)
