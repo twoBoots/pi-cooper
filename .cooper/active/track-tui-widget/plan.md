@@ -20,7 +20,7 @@
   - [x] Sub-task: Write unit tests for `TuiWidget` lifecycle (start, stop, refresh, status bar registration) (Red)
   - [x] Sub-task: Implement `TuiWidget` in `src/widget/tui-widget.ts` (Green)
   - [x] Sub-task: Refactor widget controller and verify coverage >80% (Refactor)
-- [ ] Task: Phase 2 Verification & Checkpoint (Tests, sync, checkpoint commit)
+- [x] Task: Phase 2 Verification & Checkpoint (fcba7d1)
 
 ## Phase 3: Extension Integration & End-to-End Verification
 - [ ] Task: CooperExtension Runtime Integration
