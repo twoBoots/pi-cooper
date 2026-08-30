@@ -1,0 +1,3 @@
+Task: CooperExtension Runtime Integration
+Scope: src/index.ts, src/index.test.ts, src/widget/tui-widget.ts
+Summary: Integrated TuiWidget into CooperExtension lifecycle, hooked slash commands for immediate TUI refresh, and exported widget utilities with 100% test coverage.
