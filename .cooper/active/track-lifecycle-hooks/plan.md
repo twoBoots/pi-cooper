@@ -25,10 +25,10 @@
   - [x] Sub-task: Write unit tests for `GitNotesManager` formatting and git command execution (Red)
   - [x] Sub-task: Implement `GitNotesManager` and `recordGitNote()` API (Green)
   - [x] Sub-task: Refactor and handle edge cases (missing git notes ref, non-git workspace) (Refactor)
-- [~] Task: Plan State Watcher & Event Listener Integration
-  - [ ] Sub-task: Write unit tests for reactive task completion listener (Red)
-  - [ ] Sub-task: Implement reactive plan watcher for task check detection (Green)
-  - [ ] Sub-task: Refactor event listener lifecycle cleanup (Refactor)
+- [x] Task: Plan State Watcher & Event Listener Integration (e5863f3)
+  - [x] Sub-task: Write unit tests for reactive task completion listener (Red)
+  - [x] Sub-task: Implement reactive plan watcher for task check detection (Green)
+  - [x] Sub-task: Refactor event listener lifecycle cleanup (Refactor)
 - [ ] Task: Phase 2 Verification & Checkpoint
   - [ ] Sub-task: Synchronize workflow rules (`git fetch origin main`)
   - [ ] Sub-task: Run automated test suite
