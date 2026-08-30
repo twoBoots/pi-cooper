@@ -1,0 +1,3 @@
+Task: Reactive Track State Watcher
+Scope: src/widget/watcher.ts, src/widget/watcher.test.ts
+Summary: Implemented debounced file watcher monitoring .cooper/active/ and .cooper/tracks.md with event emitter notifications and safe resource disposal.
