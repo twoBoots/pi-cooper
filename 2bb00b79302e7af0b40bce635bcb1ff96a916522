@@ -1,0 +1,3 @@
+Task: Extension Activation Entrypoint
+Scope: src/index.ts, tests/index.test.ts
+Summary: Implemented default activate(context) export, CooperExtension class, slash command and status bar registration lifecycle, and comprehensive unit tests with 100% test coverage.
