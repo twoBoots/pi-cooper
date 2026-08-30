@@ -27,8 +27,8 @@
   - [x] Sub-task: Update `CooperExtension` unit tests in `src/index.test.ts` for dynamic status bar updates (Red)
   - [x] Sub-task: Integrate `TuiWidget` into `CooperExtension` and hook slash commands to trigger refresh (Green)
   - [x] Sub-task: Refactor extension exports and ensure seamless Pi Agent Core compatibility (Refactor)
-- [~] Task: End-to-End Build & Validation
-  - [ ] Sub-task: Run full test suite with coverage (`npm run test:coverage`)
-  - [ ] Sub-task: Run typecheck and linter (`npm run lint && npm run typecheck`)
-  - [ ] Sub-task: Build production bundle (`npm run build`)
+- [x] Task: End-to-End Build & Validation
+  - [x] Sub-task: Run full test suite with coverage (`npm run test:coverage`)
+  - [x] Sub-task: Run typecheck and linter (`npm run lint && npm run typecheck`)
+  - [x] Sub-task: Build production bundle (`npm run build`)
 - [ ] Task: Phase 3 Verification & Checkpoint (Final manual verification, sync, PR readiness)
