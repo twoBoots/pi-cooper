@@ -9,7 +9,7 @@
   - [x] Sub-task: Write unit tests for `SpecDeltaInterceptor` (Red)
   - [x] Sub-task: Implement `SpecDeltaInterceptor` validation, diff matching, and bypass flags (Green)
   - [x] Sub-task: Refactor & verify test coverage >80% (Refactor)
-- [ ] Task: Pre-Commit & Pre-Tool Hook Handlers
+- [~] Task: Pre-Commit & Pre-Tool Hook Handlers
   - [ ] Sub-task: Write unit tests for hook invocation and CLI/event integration (Red)
   - [ ] Sub-task: Implement hook execution and formatting helpers (Green)
   - [ ] Sub-task: Refactor hook error handling (Refactor)
