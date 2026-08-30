@@ -16,6 +16,10 @@ All active and completed Cooper tracks are registered below.
   - Worktree: `.worktrees/track-worktree-sync`
   - Link: [.cooper/active/track-worktree-sync/index.md](.cooper/active/track-worktree-sync/index.md)
 
+- [x] **Track: Implement Persistent TUI Status Widget & Reactive Indicators** (`track-tui-widget`)
+  - Worktree: `.worktrees/track-tui-widget`
+  - Link: [.cooper/active/track-tui-widget/index.md](.cooper/active/track-tui-widget/index.md)
+
 - [x] **Track: Implement event-driven SDD governance, pre-commit/pre-tool spec validation, Git Notes capture, and phase gatekeeping** (`track-lifecycle-hooks`)
   - Worktree: `.worktrees/track-lifecycle-hooks`
   - Link: [.cooper/active/track-lifecycle-hooks/index.md](.cooper/active/track-lifecycle-hooks/index.md)

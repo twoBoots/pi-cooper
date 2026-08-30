@@ -98,4 +98,19 @@ describe("Extension Entrypoint (activate)", () => {
     expect(mockContext.registerCommand).toHaveBeenCalledTimes(5);
     instance.dispose();
   });
+
+  it("integrates TuiWidget and disposes cleanly", async () => {
+    const mockContext: ExtensionContext = {
+      workspacePath: "/workspace/test",
+      registerCommand: vi.fn(),
+      registerStatusBarItem: vi.fn(),
+    };
+
+    const instance = activate(mockContext);
+    const widget = instance.getTuiWidget();
+    expect(widget).toBeDefined();
+
+    instance.dispose();
+    expect(widget.isAlive()).toBe(false);
+  });
 });

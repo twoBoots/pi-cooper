@@ -30,3 +30,6 @@
      - `cooper-implement`: Execute TDD tasks, record Git Notes, run phase checkpoints and syncs.
      - `cooper-review`: Conduct Principal Engineer code review against spec deltas, styleguides, and tests.
      - `cooper-status`: Inspect active worktrees, track progress, and phase checkpoints.
+
+6. **Interactive Question Tools Protocol (Temporary Local Rule - Upstream Issue #16)**:
+   - When presenting single-choice or multiple-choice options or requesting approval, ALWAYS invoke the runtime's dedicated interactive `ask_question` tool rather than outputting raw numbered markdown text lists.

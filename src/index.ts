@@ -1,10 +1,11 @@
-import { EXTENSION_ID, COMMANDS } from "./constants.js";
+import { COMMANDS } from "./constants.js";
 import type { ExtensionContext } from "./types.js";
 import { handleStatusCommand } from "./commands/status.js";
 import { handleTracksCommand } from "./commands/tracks.js";
 import { handleSwitchCommand } from "./commands/switch.js";
 import { handleValidateCommand } from "./commands/validate.js";
 import { handleCheckpointCommand } from "./commands/checkpoint.js";
+import { TuiWidget } from "./widget/tui-widget.js";
 import { SpecDeltaInterceptor } from "./lifecycle/spec-interceptor.js";
 import { GitNotesManager } from "./lifecycle/git-notes.js";
 import { PhaseGatekeeper } from "./lifecycle/phase-gatekeeper.js";
@@ -15,6 +16,7 @@ import { handlePreCommitHook, handlePreToolHook } from "./lifecycle/hooks.js";
  */
 export class CooperExtension {
   private readonly context: ExtensionContext;
+  private readonly tuiWidget: TuiWidget;
   private readonly interceptor: SpecDeltaInterceptor;
   private readonly gitNotesManager: GitNotesManager;
   private readonly phaseGatekeeper: PhaseGatekeeper;
@@ -22,6 +24,7 @@ export class CooperExtension {
 
   constructor(context: ExtensionContext) {
     this.context = context;
+    this.tuiWidget = new TuiWidget(context);
     this.interceptor = new SpecDeltaInterceptor({
       workspacePath: context.workspacePath,
     });
@@ -34,7 +37,7 @@ export class CooperExtension {
   }
 
   /**
-   * Initializes extension components, registers commands, and sets up lifecycle hooks
+   * Initializes extension components, registers commands, and sets up lifecycle hooks and TUI widget
    */
   public initialize(): void {
     if (this.isInitialized) {
@@ -42,16 +45,21 @@ export class CooperExtension {
     }
 
     this.registerSlashCommands();
-    this.registerStatusBar();
+    void this.tuiWidget.start();
     this.registerLifecycleHooks();
     this.isInitialized = true;
   }
 
   /**
-   * Disposes active listeners and resources
+   * Disposes extension resources and stops background watchers
    */
   public dispose(): void {
+    this.tuiWidget.dispose();
     this.isInitialized = false;
+  }
+
+  public getTuiWidget(): TuiWidget {
+    return this.tuiWidget;
   }
 
   public getInterceptor(): SpecDeltaInterceptor {
@@ -68,7 +76,9 @@ export class CooperExtension {
 
   private registerSlashCommands(): void {
     this.context.registerCommand(COMMANDS.STATUS, async () => {
-      return handleStatusCommand(this.context.workspacePath);
+      const result = await handleStatusCommand(this.context.workspacePath);
+      void this.tuiWidget.refresh();
+      return result;
     });
 
     this.context.registerCommand(COMMANDS.TRACKS, async () => {
@@ -77,26 +87,22 @@ export class CooperExtension {
 
     this.context.registerCommand(COMMANDS.SWITCH, async (...args: unknown[]) => {
       const trackId = typeof args[0] === "string" ? args[0] : undefined;
-      return handleSwitchCommand(trackId, this.context);
+      const result = await handleSwitchCommand(trackId, this.context);
+      void this.tuiWidget.refresh();
+      return result;
     });
 
     this.context.registerCommand(COMMANDS.VALIDATE, async () => {
-      return handleValidateCommand(this.context.workspacePath);
+      const result = await handleValidateCommand(this.context.workspacePath);
+      void this.tuiWidget.refresh();
+      return result;
     });
 
     this.context.registerCommand(COMMANDS.CHECKPOINT, async () => {
-      return handleCheckpointCommand(this.context.workspacePath);
+      const result = await handleCheckpointCommand(this.context.workspacePath);
+      void this.tuiWidget.refresh();
+      return result;
     });
-  }
-
-  private registerStatusBar(): void {
-    if (typeof this.context.registerStatusBarItem === "function") {
-      this.context.registerStatusBarItem({
-        id: `${EXTENSION_ID}-status`,
-        text: "[Cooper: Idle]",
-        tooltip: "Cooper Spec-Driven Development",
-      });
-    }
   }
 
   private registerLifecycleHooks(): void {
@@ -144,6 +150,10 @@ export * from "./commands/tracks.js";
 export * from "./commands/switch.js";
 export * from "./commands/validate.js";
 export * from "./commands/checkpoint.js";
+export * from "./widget/formatter.js";
+export * from "./widget/state.js";
+export * from "./widget/watcher.js";
+export * from "./widget/tui-widget.js";
 export * from "./lifecycle/spec-interceptor.js";
 export * from "./lifecycle/git-notes.js";
 export * from "./lifecycle/plan-watcher.js";
