@@ -21,10 +21,10 @@
 ---
 
 ## Phase 2: Automated Git Notes Manager
-- [~] Task: Git Notes Data Formatter & Storage Engine
-  - [ ] Sub-task: Write unit tests for `GitNotesManager` formatting and git command execution (Red)
-  - [ ] Sub-task: Implement `GitNotesManager` and `recordGitNote()` API (Green)
-  - [ ] Sub-task: Refactor and handle edge cases (missing git notes ref, non-git workspace) (Refactor)
+- [x] Task: Git Notes Data Formatter & Storage Engine (cfe27a1)
+  - [x] Sub-task: Write unit tests for `GitNotesManager` formatting and git command execution (Red)
+  - [x] Sub-task: Implement `GitNotesManager` and `recordGitNote()` API (Green)
+  - [x] Sub-task: Refactor and handle edge cases (missing git notes ref, non-git workspace) (Refactor)
 - [ ] Task: Plan State Watcher & Event Listener Integration
   - [ ] Sub-task: Write unit tests for reactive task completion listener (Red)
   - [ ] Sub-task: Implement reactive plan watcher for task check detection (Green)
