@@ -110,6 +110,7 @@ export class CooperExtension {
             workspacePath: this.context.workspacePath,
           });
         }
+        return { allowed: true };
       });
 
       this.context.on("git:preCommit", async (event: unknown) => {
