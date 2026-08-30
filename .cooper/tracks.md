@@ -12,6 +12,6 @@ All active and completed Cooper tracks are registered below.
   - Worktree: `.worktrees/track-slash-commands`
   - Link: [.cooper/archive/track-slash-commands/index.md](.cooper/archive/track-slash-commands/index.md)
 
-- [ ] **Track: Implement Troop worktree switching, runtime context sync, and trust registry** (`track-worktree-sync`)
+- [x] **Track: Implement Troop worktree switching, runtime context sync, and trust registry** (`track-worktree-sync`)
   - Worktree: `.worktrees/track-worktree-sync`
   - Link: [.cooper/active/track-worktree-sync/index.md](.cooper/active/track-worktree-sync/index.md)
