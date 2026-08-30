@@ -15,3 +15,7 @@ All active and completed Cooper tracks are registered below.
 - [x] **Track: Implement Troop worktree switching, runtime context sync, and trust registry** (`track-worktree-sync`)
   - Worktree: `.worktrees/track-worktree-sync`
   - Link: [.cooper/active/track-worktree-sync/index.md](.cooper/active/track-worktree-sync/index.md)
+
+- [ ] **Track: Implement Persistent TUI Status Widget & Reactive Indicators** (`track-tui-widget`)
+  - Worktree: `.worktrees/track-tui-widget`
+  - Link: [.cooper/active/track-tui-widget/index.md](.cooper/active/track-tui-widget/index.md)
