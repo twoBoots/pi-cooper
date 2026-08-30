@@ -12,10 +12,10 @@
 - [x] Task: Phase 1 Verification & Checkpoint (d9ab4bf)
 
 ## Phase 2: Reactive Watcher & Widget Controller (Integration)
-- [~] Task: Reactive Track State Watcher
-  - [ ] Sub-task: Write unit tests for `TrackStateWatcher` debouncing and change detection (Red)
-  - [ ] Sub-task: Implement `TrackStateWatcher` using fs watching & event emitters in `src/widget/watcher.ts` (Green)
-  - [ ] Sub-task: Refactor watcher cleanup / resource disposal and verify coverage >80% (Refactor)
+- [x] Task: Reactive Track State Watcher (e17cd0a)
+  - [x] Sub-task: Write unit tests for `TrackStateWatcher` debouncing and change detection (Red)
+  - [x] Sub-task: Implement `TrackStateWatcher` using fs watching & event emitters in `src/widget/watcher.ts` (Green)
+  - [x] Sub-task: Refactor watcher cleanup / resource disposal and verify coverage >80% (Refactor)
 - [ ] Task: TuiWidget Component Controller
   - [ ] Sub-task: Write unit tests for `TuiWidget` lifecycle (start, stop, refresh, status bar registration) (Red)
   - [ ] Sub-task: Implement `TuiWidget` in `src/widget/tui-widget.ts` (Green)
