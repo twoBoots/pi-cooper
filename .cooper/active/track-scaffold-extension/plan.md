@@ -18,7 +18,7 @@
   - [x] Sub-task: Write unit tests verifying domain type guards and constants (Red)
   - [x] Sub-task: Implement `src/types.ts` and `src/constants.ts` (Green)
   - [x] Sub-task: Refactor & verify type compatibility (Refactor)
-- [ ] Task: Extension Activation Entrypoint
+- [~] Task: Extension Activation Entrypoint
   - [ ] Sub-task: Write unit tests for `activate(context)` extension lifecycle registration (Red)
   - [ ] Sub-task: Implement `src/index.ts` with default export (Green)
   - [ ] Sub-task: Refactor & verify test coverage >80% (Refactor)
