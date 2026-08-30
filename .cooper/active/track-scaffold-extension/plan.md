@@ -10,7 +10,7 @@
 - [x] Task: Build & Test Toolchain Configuration (ac85310)
   - [x] Sub-task: Configure `tsup.config.ts` for ESM bundling to `dist/`
   - [x] Sub-task: Configure `vitest.config.ts` with >80% coverage threshold
-- [ ] Task: Phase 1 Verification & Checkpoint
+- [x] Task: Phase 1 Verification & Checkpoint (56e824e)
 
 ## Phase 2: Extension Entrypoint & Type Definitions (TDD)
 
