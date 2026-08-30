@@ -8,6 +8,6 @@ All active and completed Cooper tracks are registered below.
   - Worktree: `.worktrees/track-scaffold-extension`
   - Link: [.cooper/archive/track-scaffold-extension/index.md](.cooper/archive/track-scaffold-extension/index.md)
 
-- [ ] **Track: Implement zero-cost in-process human slash commands** (`track-slash-commands`)
+- [x] **Track: Implement zero-cost in-process human slash commands** (`track-slash-commands`)
   - Worktree: `.worktrees/track-slash-commands`
   - Link: [.cooper/active/track-slash-commands/index.md](.cooper/active/track-slash-commands/index.md)

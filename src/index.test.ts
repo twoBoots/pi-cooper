@@ -1,4 +1,7 @@
 import { describe, it, expect, vi } from "vitest";
+import * as path from "node:path";
+import * as fs from "node:fs/promises";
+import * as os from "node:os";
 import activate, { CooperExtension } from "./index.js";
 import { COMMANDS } from "./constants.js";
 import type { ExtensionContext } from "./types.js";
@@ -9,42 +12,51 @@ describe("Extension Entrypoint (activate)", () => {
   });
 
   it("registers slash commands with the Pi runtime context and executes handlers", async () => {
-    const registeredCommands = new Map<string, (...args: unknown[]) => Promise<unknown> | unknown>();
-    const registeredStatusBar: unknown[] = [];
+    const tmpDir = await fs.mkdtemp(path.join(os.tmpdir(), "cooper-index-test-"));
+    try {
+      const cooperDir = path.join(tmpDir, ".cooper");
+      await fs.mkdir(cooperDir, { recursive: true });
+      await fs.writeFile(path.join(cooperDir, "index.md"), "# Index");
 
-    const mockContext: ExtensionContext = {
-      workspacePath: "/workspace/test",
-      registerCommand: vi.fn((name, handler) => {
-        registeredCommands.set(name, handler);
-      }),
-      registerStatusBarItem: vi.fn((item) => {
-        registeredStatusBar.push(item);
-      }),
-    };
+      const registeredCommands = new Map<string, (...args: unknown[]) => Promise<unknown> | unknown>();
+      const registeredStatusBar: unknown[] = [];
 
-    const instance = activate(mockContext);
+      const mockContext: ExtensionContext = {
+        workspacePath: tmpDir,
+        registerCommand: vi.fn((name, handler) => {
+          registeredCommands.set(name, handler);
+        }),
+        registerStatusBarItem: vi.fn((item) => {
+          registeredStatusBar.push(item);
+        }),
+      };
 
-    expect(instance).toBeInstanceOf(CooperExtension);
-    expect(mockContext.registerCommand).toHaveBeenCalledTimes(5);
-    expect(registeredCommands.has(COMMANDS.STATUS)).toBe(true);
-    expect(registeredCommands.has(COMMANDS.TRACKS)).toBe(true);
-    expect(registeredCommands.has(COMMANDS.SWITCH)).toBe(true);
-    expect(registeredCommands.has(COMMANDS.VALIDATE)).toBe(true);
-    expect(registeredCommands.has(COMMANDS.CHECKPOINT)).toBe(true);
-    expect(registeredStatusBar).toHaveLength(1);
+      const instance = activate(mockContext);
 
-    // Test handler execution
-    const statusHandler = registeredCommands.get(COMMANDS.STATUS)!;
-    const tracksHandler = registeredCommands.get(COMMANDS.TRACKS)!;
-    const switchHandler = registeredCommands.get(COMMANDS.SWITCH)!;
-    const validateHandler = registeredCommands.get(COMMANDS.VALIDATE)!;
-    const checkpointHandler = registeredCommands.get(COMMANDS.CHECKPOINT)!;
+      expect(instance).toBeInstanceOf(CooperExtension);
+      expect(mockContext.registerCommand).toHaveBeenCalledTimes(5);
+      expect(registeredCommands.has(COMMANDS.STATUS)).toBe(true);
+      expect(registeredCommands.has(COMMANDS.TRACKS)).toBe(true);
+      expect(registeredCommands.has(COMMANDS.SWITCH)).toBe(true);
+      expect(registeredCommands.has(COMMANDS.VALIDATE)).toBe(true);
+      expect(registeredCommands.has(COMMANDS.CHECKPOINT)).toBe(true);
+      expect(registeredStatusBar).toHaveLength(1);
 
-    expect(await statusHandler()).toContain("Status");
-    expect(await tracksHandler()).toContain("Tracks");
-    expect(await switchHandler()).toContain("Switch");
-    expect(await validateHandler()).toContain("Validate");
-    expect(await checkpointHandler()).toContain("Checkpoint");
+      // Test handler execution
+      const statusHandler = registeredCommands.get(COMMANDS.STATUS)!;
+      const tracksHandler = registeredCommands.get(COMMANDS.TRACKS)!;
+      const switchHandler = registeredCommands.get(COMMANDS.SWITCH)!;
+      const validateHandler = registeredCommands.get(COMMANDS.VALIDATE)!;
+      const checkpointHandler = registeredCommands.get(COMMANDS.CHECKPOINT)!;
+
+      expect(await statusHandler()).toContain("Status");
+      expect(await tracksHandler()).toContain("Tracks");
+      expect(await switchHandler("test-track")).toContain("test-track");
+      expect(await validateHandler()).toContain("Validation");
+      expect(await checkpointHandler()).toContain("checkpoint");
+    } finally {
+      await fs.rm(tmpDir, { recursive: true, force: true });
+    }
   });
 
   it("handles contexts without optional statusBar registration gracefully", () => {

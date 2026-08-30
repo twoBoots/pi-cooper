@@ -7,5 +7,6 @@ export default defineConfig({
     format: "esm",
     sourcemap: true,
   },
-  external: ["@earendil-works/pi-agent-core"],
+  platform: "node",
+  external: [/^node:/, "@earendil-works/pi-agent-core"],
 });
