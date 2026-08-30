@@ -6,6 +6,10 @@ import { handleSwitchCommand } from "./commands/switch.js";
 import { handleValidateCommand } from "./commands/validate.js";
 import { handleCheckpointCommand } from "./commands/checkpoint.js";
 import { TuiWidget } from "./widget/tui-widget.js";
+import { SpecDeltaInterceptor } from "./lifecycle/spec-interceptor.js";
+import { GitNotesManager } from "./lifecycle/git-notes.js";
+import { PhaseGatekeeper } from "./lifecycle/phase-gatekeeper.js";
+import { handlePreCommitHook, handlePreToolHook } from "./lifecycle/hooks.js";
 
 /**
  * Main Cooper Extension instance running in the Pi agent runtime
@@ -13,15 +17,27 @@ import { TuiWidget } from "./widget/tui-widget.js";
 export class CooperExtension {
   private readonly context: ExtensionContext;
   private readonly tuiWidget: TuiWidget;
+  private readonly interceptor: SpecDeltaInterceptor;
+  private readonly gitNotesManager: GitNotesManager;
+  private readonly phaseGatekeeper: PhaseGatekeeper;
   private isInitialized = false;
 
   constructor(context: ExtensionContext) {
     this.context = context;
     this.tuiWidget = new TuiWidget(context);
+    this.interceptor = new SpecDeltaInterceptor({
+      workspacePath: context.workspacePath,
+    });
+    this.gitNotesManager = new GitNotesManager({
+      workspacePath: context.workspacePath,
+    });
+    this.phaseGatekeeper = new PhaseGatekeeper({
+      workspacePath: context.workspacePath,
+    });
   }
 
   /**
-   * Initializes extension components, registers commands, and sets up status bar widgets
+   * Initializes extension components, registers commands, and sets up lifecycle hooks and TUI widget
    */
   public initialize(): void {
     if (this.isInitialized) {
@@ -30,14 +46,8 @@ export class CooperExtension {
 
     this.registerSlashCommands();
     void this.tuiWidget.start();
+    this.registerLifecycleHooks();
     this.isInitialized = true;
-  }
-
-  /**
-   * Returns the active TUI widget controller
-   */
-  public getTuiWidget(): TuiWidget {
-    return this.tuiWidget;
   }
 
   /**
@@ -45,6 +55,23 @@ export class CooperExtension {
    */
   public dispose(): void {
     this.tuiWidget.dispose();
+    this.isInitialized = false;
+  }
+
+  public getTuiWidget(): TuiWidget {
+    return this.tuiWidget;
+  }
+
+  public getInterceptor(): SpecDeltaInterceptor {
+    return this.interceptor;
+  }
+
+  public getGitNotesManager(): GitNotesManager {
+    return this.gitNotesManager;
+  }
+
+  public getPhaseGatekeeper(): PhaseGatekeeper {
+    return this.phaseGatekeeper;
   }
 
   private registerSlashCommands(): void {
@@ -77,6 +104,31 @@ export class CooperExtension {
       return result;
     });
   }
+
+  private registerLifecycleHooks(): void {
+    if (typeof this.context.on === "function") {
+      this.context.on("tool:beforeExecute", async (event: unknown) => {
+        const payload = event as { toolName?: string; toolArgs?: Record<string, unknown> } | undefined;
+        if (payload?.toolName) {
+          return handlePreToolHook({
+            toolName: payload.toolName,
+            toolArgs: payload.toolArgs,
+            workspacePath: this.context.workspacePath,
+          });
+        }
+        return { allowed: true };
+      });
+
+      this.context.on("git:preCommit", async (event: unknown) => {
+        const payload = event as { stagedFiles?: string[]; bypass?: boolean } | undefined;
+        return handlePreCommitHook({
+          workspacePath: this.context.workspacePath,
+          stagedFiles: payload?.stagedFiles,
+          bypass: payload?.bypass,
+        });
+      });
+    }
+  }
 }
 
 /**
@@ -102,3 +154,8 @@ export * from "./widget/formatter.js";
 export * from "./widget/state.js";
 export * from "./widget/watcher.js";
 export * from "./widget/tui-widget.js";
+export * from "./lifecycle/spec-interceptor.js";
+export * from "./lifecycle/git-notes.js";
+export * from "./lifecycle/plan-watcher.js";
+export * from "./lifecycle/phase-gatekeeper.js";
+export * from "./lifecycle/hooks.js";

@@ -11,7 +11,7 @@ describe("Extension Entrypoint (activate)", () => {
     expect(typeof activate).toBe("function");
   });
 
-  it("registers slash commands with the Pi runtime context and executes handlers", async () => {
+  it("registers slash commands and lifecycle hooks with the Pi runtime context", async () => {
     const tmpDir = await fs.mkdtemp(path.join(os.tmpdir(), "cooper-index-test-"));
     try {
       const cooperDir = path.join(tmpDir, ".cooper");
@@ -20,6 +20,7 @@ describe("Extension Entrypoint (activate)", () => {
 
       const registeredCommands = new Map<string, (...args: unknown[]) => Promise<unknown> | unknown>();
       const registeredStatusBar: unknown[] = [];
+      const registeredEvents = new Map<string, (...args: unknown[]) => void>();
 
       const mockContext: ExtensionContext = {
         workspacePath: tmpDir,
@@ -28,6 +29,9 @@ describe("Extension Entrypoint (activate)", () => {
         }),
         registerStatusBarItem: vi.fn((item) => {
           registeredStatusBar.push(item);
+        }),
+        on: vi.fn((event, listener) => {
+          registeredEvents.set(event, listener);
         }),
       };
 
@@ -41,6 +45,13 @@ describe("Extension Entrypoint (activate)", () => {
       expect(registeredCommands.has(COMMANDS.VALIDATE)).toBe(true);
       expect(registeredCommands.has(COMMANDS.CHECKPOINT)).toBe(true);
       expect(registeredStatusBar).toHaveLength(1);
+      expect(mockContext.on).toHaveBeenCalled();
+      expect(registeredEvents.has("tool:beforeExecute")).toBe(true);
+
+      // Verify lifecycle subsystems are accessible on instance
+      expect(instance.getInterceptor()).toBeDefined();
+      expect(instance.getGitNotesManager()).toBeDefined();
+      expect(instance.getPhaseGatekeeper()).toBeDefined();
 
       // Test handler execution
       const statusHandler = registeredCommands.get(COMMANDS.STATUS)!;
@@ -54,18 +65,22 @@ describe("Extension Entrypoint (activate)", () => {
       expect(await switchHandler("test-track")).toContain("test-track");
       expect(await validateHandler()).toContain("Validation");
       expect(await checkpointHandler()).toContain("checkpoint");
+
+      instance.dispose();
     } finally {
       await fs.rm(tmpDir, { recursive: true, force: true });
     }
   });
 
-  it("handles contexts without optional statusBar registration gracefully", () => {
+  it("handles contexts without optional statusBar or event emitter registration gracefully", () => {
     const mockContext: ExtensionContext = {
       workspacePath: "/workspace/test",
       registerCommand: vi.fn(),
     };
 
-    expect(() => activate(mockContext)).not.toThrow();
+    const instance = activate(mockContext);
+    expect(instance).toBeInstanceOf(CooperExtension);
+    instance.dispose();
   });
 
   it("does not re-register if initialize is called twice", () => {
@@ -81,6 +96,7 @@ describe("Extension Entrypoint (activate)", () => {
     // Call initialize again
     instance.initialize();
     expect(mockContext.registerCommand).toHaveBeenCalledTimes(5);
+    instance.dispose();
   });
 
   it("integrates TuiWidget and disposes cleanly", async () => {
