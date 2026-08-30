@@ -15,10 +15,10 @@
 ## Testing & Quality Control
 - **Test Runner / Framework**: Vitest
 - **Coverage Target**: >80% code coverage across all modules
-- **Linter & Formatter**: ESLint + Prettier / TypeScript compiler (`tsc --noEmit`)
+- **Linter & Formatter**: `oxlint` (OXC Linter) / TypeScript compiler (`tsc --noEmit`)
 
 ## Build & CI/CD
-- **Package Manager**: pnpm / npm
-- **Build Tool**: `tsup` / `tsc` (Bundle to standard ESM entrypoint)
+- **Package Manager**: npm
+- **Build Tool**: `rolldown` (OXC Rust bundler) + `tsc` (type declarations)
 - **CI System**: GitHub Actions
 
