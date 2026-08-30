@@ -24,4 +24,4 @@
   - [x] Sub-task: Write unit tests for `/cooper:switch`, `/cooper:validate`, `/cooper:checkpoint` (Red)
   - [x] Sub-task: Implement `src/commands/switch.ts`, `src/commands/validate.ts`, `src/commands/checkpoint.ts` (Green)
   - [x] Sub-task: Wire all handlers into `src/index.ts` CooperExtension registration (Refactor)
-- [ ] Task: Phase 2 Verification & Checkpoint
+- [x] Task: Phase 2 Verification & Checkpoint (a8af9e4)
