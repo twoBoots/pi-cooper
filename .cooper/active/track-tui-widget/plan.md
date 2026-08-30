@@ -23,10 +23,10 @@
 - [x] Task: Phase 2 Verification & Checkpoint (fcba7d1)
 
 ## Phase 3: Extension Integration & End-to-End Verification
-- [~] Task: CooperExtension Runtime Integration
-  - [ ] Sub-task: Update `CooperExtension` unit tests in `src/index.test.ts` for dynamic status bar updates (Red)
-  - [ ] Sub-task: Integrate `TuiWidget` into `CooperExtension` and hook slash commands to trigger refresh (Green)
-  - [ ] Sub-task: Refactor extension exports and ensure seamless Pi Agent Core compatibility (Refactor)
+- [x] Task: CooperExtension Runtime Integration (2369c5d)
+  - [x] Sub-task: Update `CooperExtension` unit tests in `src/index.test.ts` for dynamic status bar updates (Red)
+  - [x] Sub-task: Integrate `TuiWidget` into `CooperExtension` and hook slash commands to trigger refresh (Green)
+  - [x] Sub-task: Refactor extension exports and ensure seamless Pi Agent Core compatibility (Refactor)
 - [ ] Task: End-to-End Build & Validation
   - [ ] Sub-task: Run full test suite with coverage (`npm run test:coverage`)
   - [ ] Sub-task: Run typecheck and linter (`npm run lint && npm run typecheck`)
