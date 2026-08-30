@@ -1,7 +1,7 @@
 import { describe, it, expect, vi } from "vitest";
-import activate, { CooperExtension } from "../src/index.js";
-import { COMMANDS } from "../src/constants.js";
-import type { ExtensionContext } from "../src/types.js";
+import activate, { CooperExtension } from "./index.js";
+import { COMMANDS } from "./constants.js";
+import type { ExtensionContext } from "./types.js";
 
 describe("Extension Entrypoint (activate)", () => {
   it("exports default activate function", () => {

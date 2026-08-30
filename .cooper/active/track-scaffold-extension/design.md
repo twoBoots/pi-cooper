@@ -9,11 +9,10 @@
 pi-cooper/
 ├── src/
 │   ├── index.ts          # Extension entrypoint conforming to Pi extension contract
-│   ├── types.ts          # Extension context types and Cooper domain interfaces
-│   └── constants.ts      # Extension metadata, versioning, command constants
-├── tests/
 │   ├── index.test.ts     # Extension entrypoint and mock activation tests
-│   └── types.test.ts     # Domain types & schema validation tests
+│   ├── types.ts          # Extension context types and Cooper domain interfaces
+│   ├── types.test.ts     # Domain types & schema validation tests
+│   └── constants.ts      # Extension metadata, versioning, command constants
 ├── package.json          # Package manifest, dependencies, test/build scripts
 ├── tsconfig.json         # Strict TypeScript configuration
 ├── tsup.config.ts        # Fast bundling toolchain (ESM + dts)

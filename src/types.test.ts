@@ -3,11 +3,11 @@ import {
   EXTENSION_ID,
   EXTENSION_NAME,
   COMMANDS,
-} from "../src/constants.js";
+} from "./constants.js";
 import {
   isTrackMetadata,
   isCooperProject,
-} from "../src/types.js";
+} from "./types.js";
 
 describe("Extension Constants", () => {
   it("exports correct extension identifiers", () => {
