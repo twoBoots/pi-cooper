@@ -24,6 +24,14 @@ export class TuiWidget {
     this.renderOptions = options?.renderOptions;
     this.statusBarItemId = `${EXTENSION_ID}-status`;
     this.watcher = new TrackStateWatcher(context.workspacePath, options);
+
+    if (typeof this.context.registerStatusBarItem === "function") {
+      this.context.registerStatusBarItem({
+        id: this.statusBarItemId,
+        text: this.formattedText,
+        tooltip: "Cooper Spec-Driven Development",
+      });
+    }
   }
 
   /**
