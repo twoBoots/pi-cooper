@@ -9,7 +9,7 @@
   - [x] Sub-task: Write unit tests for reading active track plan progress and spec validity (Red)
   - [x] Sub-task: Implement state extraction functions in `src/widget/state.ts` (Green)
   - [x] Sub-task: Refactor state extraction and verify coverage >80% (Refactor)
-- [ ] Task: Phase 1 Verification & Checkpoint (Tests, sync, checkpoint commit)
+- [x] Task: Phase 1 Verification & Checkpoint (d9ab4bf)
 
 ## Phase 2: Reactive Watcher & Widget Controller (Integration)
 - [ ] Task: Reactive Track State Watcher
