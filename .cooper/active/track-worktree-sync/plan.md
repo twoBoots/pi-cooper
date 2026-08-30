@@ -4,10 +4,10 @@
 
 ## Phase 1: Worktree & Trust Registry Utilities (TDD)
 
-- [~] Task: Worktree & Trust Registry Utilities
-  - [ ] Sub-task: Write unit tests for worktree path resolution, `process.chdir()` switching, and `trust.json` synchronization (Red)
-  - [ ] Sub-task: Implement `src/utils/worktree.ts` (Green)
-  - [ ] Sub-task: Refactor & maintain >80% coverage (Refactor)
+- [x] Task: Worktree & Trust Registry Utilities (f611f14)
+  - [x] Sub-task: Write unit tests for worktree path resolution, `process.chdir()` switching, and `trust.json` synchronization (Red)
+  - [x] Sub-task: Implement `src/utils/worktree.ts` (Green)
+  - [x] Sub-task: Refactor & maintain >80% coverage (Refactor)
 - [ ] Task: Phase 1 Verification & Checkpoint
 
 ## Phase 2: Switch Command Enhancement & Extension Integration (TDD)
