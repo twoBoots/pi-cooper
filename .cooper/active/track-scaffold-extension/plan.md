@@ -22,4 +22,4 @@
   - [x] Sub-task: Write unit tests for `activate(context)` extension lifecycle registration (Red)
   - [x] Sub-task: Implement `src/index.ts` with default export (Green)
   - [x] Sub-task: Refactor & verify test coverage >80% (Refactor)
-- [ ] Task: Phase 2 Verification & Checkpoint
+- [x] Task: Phase 2 Verification & Checkpoint (bbddcf9)
