@@ -1,0 +1,3 @@
+Task: Cooper Filesystem Utilities
+Scope: src/utils/cooper-fs.ts, src/utils/cooper-fs.test.ts
+Summary: Implemented findCooperRoot upward traversal, readTracksRegistry, readTrackPlan with task aggregation, readTrackMetadata, and listActiveTracks with 96% unit test coverage.
