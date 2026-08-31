@@ -5,10 +5,10 @@
 ---
 
 ## Phase 1: Continuous Integration Workflow (`ci.yml`)
-- [~] Task: CI Workflow Specification & Configuration
-  - [ ] Sub-task: Write unit test validating workflow structure and steps (Red)
-  - [ ] Sub-task: Create `.github/workflows/ci.yml` running lint, typecheck, build, and test:coverage on Ubuntu + Node LTS (Green)
-  - [ ] Sub-task: Refactor & verify local execution of all CI commands (Refactor)
+- [x] Task: CI Workflow Specification & Configuration (5af49bb)
+  - [x] Sub-task: Write unit test validating workflow structure and steps (Red)
+  - [x] Sub-task: Create `.github/workflows/ci.yml` running lint, typecheck, build, and test:coverage on Ubuntu + Node LTS (Green)
+  - [x] Sub-task: Refactor & verify local execution of all CI commands (Refactor)
 - [ ] Task: Phase 1 Verification & Checkpoint
   - [ ] Sub-task: Synchronize workflow rules (`git fetch origin main`)
   - [ ] Sub-task: Run automated test suite
