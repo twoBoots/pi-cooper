@@ -17,9 +17,9 @@
 ---
 
 ## Phase 2: Automated GitHub Release Workflow (`release.yml`)
-- [~] Task: GitHub Release Workflow Configuration
-  - [ ] Sub-task: Create `.github/workflows/release.yml` with version tag and workflow_dispatch triggers (Green)
-  - [ ] Sub-task: Refactor release asset packaging steps (Refactor)
+- [x] Task: GitHub Release Workflow Configuration (87cc4d2)
+  - [x] Sub-task: Create `.github/workflows/release.yml` with version tag and workflow_dispatch triggers (Green)
+  - [x] Sub-task: Refactor release asset packaging steps (Refactor)
 - [ ] Task: Phase 2 Verification & Checkpoint
   - [ ] Sub-task: Synchronize workflow rules (`git fetch origin main`)
   - [ ] Sub-task: Run automated test suite
