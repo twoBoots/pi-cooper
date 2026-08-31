@@ -23,3 +23,7 @@ All active and completed Cooper tracks are registered below.
 - [x] **Track: Implement event-driven SDD governance, pre-commit/pre-tool spec validation, Git Notes capture, and phase gatekeeping** (`track-lifecycle-hooks`)
   - Worktree: `.worktrees/track-lifecycle-hooks`
   - Link: [.cooper/active/track-lifecycle-hooks/index.md](.cooper/active/track-lifecycle-hooks/index.md)
+
+- [ ] **Track: Implement GitHub Actions CI validation and automated GitHub release workflows** (`track-cicd-release`)
+  - Worktree: `.worktrees/track-cicd-release`
+  - Link: [.cooper/active/track-cicd-release/index.md](.cooper/active/track-cicd-release/index.md)
