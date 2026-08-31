@@ -14,6 +14,7 @@
   - [worktree-sync](./specs/worktree-sync/spec.md)
   - [tui-widget](./specs/tui-widget/spec.md)
   - [lifecycle-hooks](./specs/lifecycle-hooks/spec.md)
+  - [cicd-release](./specs/cicd-release/spec.md)
 
 ## Tracks
 - [Tracks Registry](./tracks.md)
