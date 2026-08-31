@@ -13,6 +13,7 @@
 - **`worktree-sync`**: Troop worktree and workspace synchronization utilizing Pi internal runtime context and `process.chdir()` to avoid subshell traps, along with automated project trust registry management.
 - **`tui-widget`**: Persistent terminal UI status bar displaying active track, phase, task progress, and living spec health.
 - **`lifecycle-hooks`**: Event-driven SDD governance, pre-tool/pre-commit spec delta validation, automated Git Notes task summaries, and phase gatekeeping.
+- **`cicd-release`**: Continuous integration quality gatekeeping and automated GitHub release packaging.
 
 ## Quality & Non-Functional Goals
 - **Instant Slash Commands**: Sub-5ms execution time for in-process commands with 0 LLM token overhead.
