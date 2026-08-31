@@ -24,6 +24,6 @@ All active and completed Cooper tracks are registered below.
   - Worktree: `.worktrees/track-lifecycle-hooks`
   - Link: [.cooper/active/track-lifecycle-hooks/index.md](.cooper/active/track-lifecycle-hooks/index.md)
 
-- [ ] **Track: Implement GitHub Actions CI validation and automated GitHub release workflows** (`track-cicd-release`)
+- [x] **Track: Implement GitHub Actions CI validation and automated GitHub release workflows** (`track-cicd-release`)
   - Worktree: `.worktrees/track-cicd-release`
   - Link: [.cooper/active/track-cicd-release/index.md](.cooper/active/track-cicd-release/index.md)
