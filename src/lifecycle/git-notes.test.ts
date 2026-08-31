@@ -50,7 +50,7 @@ describe("GitNotesManager & Note Formatter", () => {
       const testFile = path.join(tmpDir, "file.txt");
       await fs.writeFile(testFile, "hello world");
       await execFileAsync("git", ["add", "file.txt"], { cwd: tmpDir });
-      const { stdout: commitOut } = await execFileAsync("git", ["commit", "-m", "initial commit"], { cwd: tmpDir });
+      await execFileAsync("git", ["commit", "-m", "initial commit"], { cwd: tmpDir });
       const { stdout: hashOut } = await execFileAsync("git", ["rev-parse", "HEAD"], { cwd: tmpDir });
       const commitSha = hashOut.trim();
 
